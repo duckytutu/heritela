@@ -69,3 +69,6 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
+
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/app.min.css');
+wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.min.js');
