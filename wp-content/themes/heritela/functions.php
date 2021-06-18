@@ -70,5 +70,9 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * https://github.com/woocommerce/theme-customisations
  */
 
-wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/app.min.css');
-wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.min.js');
+function init_assets() {
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/app.min.css');
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/app.min.js');
+}
+
+add_action('wp_enqueue_scripts', 'init_assets');
