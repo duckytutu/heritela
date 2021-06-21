@@ -131,7 +131,7 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 				$class = '';
 			}
 			?>
-		<ul id="site-header-cart" class="site-header-cart menu">
+		<ul id="site-header-cart" class="site-header-cart w-2/12 menu hidden md:block">
 			<li class="<?php echo esc_attr( $class ); ?>">
 				<?php storefront_cart_link(); ?>
 			</li>

@@ -192,7 +192,7 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 */
 	function storefront_site_branding() {
 		?>
-		<div class="site-branding">
+		<div class="page-branding flex items-center">
 			<?php storefront_site_title_or_logo(); ?>
 		</div>
 		<?php
@@ -210,7 +210,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 	function storefront_site_title_or_logo( $echo = true ) {
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			$logo = get_custom_logo();
-			$html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+			$html = is_home() ? '<h1 class="logo mr-4">' . $logo . '</h1>' : $logo;
 		} else {
 			$tag = is_home() ? 'h1' : 'div';
 
@@ -238,7 +238,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	 */
 	function storefront_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'storefront' ); ?>">
+		<nav id="site-navigation" class="main-navigation w-5/12 md:w-8/12" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'storefront' ); ?>">
 		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_html( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
@@ -251,7 +251,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'handheld',
-					'container_class' => 'handheld-navigation',
+				'container_class' => 'handheld-navigation bg-white',
 				)
 			);
 			?>
@@ -666,7 +666,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<div class="storefront-primary-navigation"><div class="col-full">';
+		echo '<div class="storefront-primary-navigation"><div class="flex justify-start md:justify-between flex-row-reverse md:flex-row">';
 	}
 }
 
@@ -684,7 +684,7 @@ if ( ! function_exists( 'storefront_header_container' ) ) {
 	 * The header container
 	 */
 	function storefront_header_container() {
-		echo '<div class="col-full">';
+		echo '<div class="page-header container py-2 md:py-0">';
 	}
 }
 

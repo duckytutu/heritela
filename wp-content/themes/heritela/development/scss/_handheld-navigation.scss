@@ -1,0 +1,22 @@
+.handheld-navigation {
+  position: fixed;
+  width: 250px;
+  left: -250px;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  box-shadow: 5px 0 5px lightgrey;
+
+  ul {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .menu-item {
+      border-bottom: 1px solid lightgray;
+    }
+  }
+}
+
+.toggled .handheld-navigation {
+  left: 0;
+}

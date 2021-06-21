@@ -76,3 +76,22 @@ function init_assets() {
 }
 
 add_action('wp_enqueue_scripts', 'init_assets');
+
+if ( ! function_exists( 'header_CTA_button' ) ) {
+	/**
+	 * Display header CTA button
+	 *
+	 * @since  1.0.0
+	 * @uses  storefront_is_woocommerce_activated() check if WooCommerce is activated
+	 * @return void
+	 */
+	function header_CTA_button() {
+		?>
+			<div class="ml-3 w-5/12 md:w-2/12 flex items-center justify-end">
+				<a class="bg-primary px-5 py-2 text-white" href="/contact">Liên hệ</a>
+			</div>
+		<?php
+	}
+}
+
+add_action( 'storefront_header', 'header_CTA_button', 61 );
