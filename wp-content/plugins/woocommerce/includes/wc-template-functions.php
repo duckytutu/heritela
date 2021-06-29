@@ -1400,12 +1400,12 @@ if ( ! function_exists( 'woocommerce_catalog_ordering' ) ) {
 		$catalog_orderby_options = apply_filters(
 			'woocommerce_catalog_orderby',
 			array(
-				'menu_order' => __( 'Default sorting', 'woocommerce' ),
-				'popularity' => __( 'Sort by popularity', 'woocommerce' ),
-				'rating'     => __( 'Sort by average rating', 'woocommerce' ),
-				'date'       => __( 'Sort by latest', 'woocommerce' ),
-				'price'      => __( 'Sort by price: low to high', 'woocommerce' ),
-				'price-desc' => __( 'Sort by price: high to low', 'woocommerce' ),
+				'menu_order' => __( 'Mặc định', 'woocommerce' ),
+				'popularity' => __( 'Phổ biến', 'woocommerce' ),
+				'rating'     => __( 'Được đánh cao', 'woocommerce' ),
+				'date'       => __( 'Mới nhất', 'woocommerce' ),
+				'price'      => __( 'Giá: thấp đến cao', 'woocommerce' ),
+				'price-desc' => __( 'Giá: cao đến thấp', 'woocommerce' ),
 			)
 		);
 
