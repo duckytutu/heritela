@@ -657,6 +657,32 @@ background-color: #71cedf;
 .label-sale.menu-item > a:after{content:"<?php _e('Sale','flatsome'); ?>";}
 .label-popular.menu-item > a:after{content:"<?php _e('Popular','flatsome'); ?>";}
 
+/* hide absolute footer */
+.absolute-footer { display: none; }
+
+/* custom homepage first section after banner */
+.home__first-section .text-box {
+	height: 100%;
+	align-items: center;
+	display: flex;
+	background: rgba(2,10,28,.95);
+	padding: 0 0.625rem;
+}
+
+.home__first-section h3 {
+	font-size: 1.2rem;
+	line-height: 1.4;
+}
+
+.home__first-section p {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+}
+
+.home__first-section span {
+	font-size: 1.5rem;
+	color: #ffba00;
+}
 </style>
 
 <?php
