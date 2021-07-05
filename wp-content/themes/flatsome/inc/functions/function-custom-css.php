@@ -683,6 +683,11 @@ background-color: #71cedf;
 	font-size: 1.5rem;
 	color: #ffba00;
 }
+
+/* override remove padding bottom of cols */
+.col, .gallery-item, .columns {
+	padding-bottom: 0;
+}
 </style>
 
 <?php
